@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economia</title>
+</head>
+<body>
+    <h1>Economia com Bilhete Único</h1>
+    <p><input type="text" id="id_valorPassagem" placeholder="Digite o valor da passagem"></p>
+    <p><input type="text" id="id_numeroViagensMensais" placeholder="Digite o número de viagens do mês"></p>
+    <p><button onclick="calcular()">Ver Economia</button></p>
+    <div id="divResultado"></div>
+    
+</body>
+<script>
+    let divResultado = document.getElementById("divResultado");
+
+    function calcular(){
+        let valorPassagem = Number(document.getElementById("id_valorPassagem").value)/2;
+        let qtdViagens = Number(document.getElementById("id_numeroViagensMensais").value);
+        let resultado = valorPassagem * qtdViagens;
+        divResultado.innerHTML = "<p>Você economizará R$" + resultado + " por mês</p>";
+
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Média</title>
+</head>
+<body>
+    <h1>Cálculo da Média na SPTech</h1>
+    <p><input type="text" id="continuada" placeholder="Digite a nota da Continuada"></p>
+    <p><input type="text" id="pesquisaInovacao" placeholder="Digite a nota de Pesquisa e Inovação"></p>
+    <p><input type="text" id="nomeAluno" placeholder="Digite o nome do aluno"></p>
+    <button onclick="calcular()">Calcular média</button>
+    <div id="divResultado"></div>
+</body>
+<script>
+    let divResultado = document.getElementById("divResultado");
+    function calcular(){
+        let notaContinuada = Number(document.getElementById("continuada").value) * 40/100;
+        let notaPesquisaInovacao = Number(document.getElementById("pesquisaInovacao").value) * 60/100;
+        let nome = document.getElementById("nomeAluno").value;
+        let media = notaContinuada + notaPesquisaInovacao;
+        divResultado.innerHTML = `<p> A média de ${nome} será de ${media}</p>`
+        }
+</script>
+</html>

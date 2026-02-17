@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividindo a pizza!</title>
+</head>
+<body>
+    <h1>Dividindo a Pizza!!</h1>
+    <p><input type="text" id="id_valorPizza" placeholder="Digite o valor da pizza"></p>
+    <p><input type="text" id="id_qtdAmigos" placeholder="Digite a quantidade de amigos"></p>
+    <p><button onclick="CalcularValor()">#lovePizza</button></p>
+    <div id="divResultado"></div>
+</body>
+<script>
+    let divResultado = document.getElementById("divResultado");
+
+    function CalcularValor(){
+        let valor = document.getElementById("id_valorPizza").value;
+        let qtdAmigos = document.getElementById("id_qtdAmigos").value;
+        let resultado = Number(valor / qtdAmigos);
+        divResultado.innerHTML = "<p>Cada um dos " + qtdAmigos + " amigos vai pagar R$" + resultado + "</p>";
+    }
+</script>
+</html>

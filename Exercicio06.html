@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    <p><input type="text" id="number01" placeholder="Digite o primeiro número"></p>
+    <p><input type="text" id="number02" placeholder="Digite o segundo número"></p>
+    <p><button onclick = "somar()">Somar</button><button onclick="subtrair()">Subtrair</button><button onclick="multiplicar()">Multiplicar</button><button onclick="dividir()">Dividir</button></p>
+    <div id="resultado"></div>
+</body>
+<script>
+    let divResultado = document.getElementById("resultado");
+
+    function somar(){
+        let number01 = Number(document.getElementById("number01").value);
+        let number02 = Number(document.getElementById("number02").value);
+        let resultado = number01 + number02;
+        divResultado.innerHTML = `A soma entre X e Y é ${resultado}`;
+    }
+
+    function subtrair(){
+        let number01 = Number(document.getElementById("number01").value);
+        let number02 = Number(document.getElementById("number02").value);
+        let resultado = number01 - number02;
+        divResultado.innerHTML = `A diferença entre X e Y é ${resultado}`;
+    }
+
+    function multiplicar(){
+        let number01 = Number(document.getElementById("number01").value);
+        let number02 = Number(document.getElementById("number02").value);
+        let resultado = number01 * number02;
+        divResultado.innerHTML = `O produto entre X e Y é ${resultado}`;
+    }
+
+    function dividir(){
+        let number01 = Number(document.getElementById("number01").value);
+        let number02 = Number(document.getElementById("number02").value);
+        let resultado = number01 / number02;
+        divResultado.innerHTML = `A razão entre X e Y é ${resultado}`;
+    }
+</script>
+</html>

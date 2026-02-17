@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aposentadoria</title>
+</head>
+<body>
+    <h1>Aposentadoria: Quanto falta?</h1>
+    <p><input type="text" placeholder="Digite sua idade" id="id_idade"></p>
+    <p><button onclick="calcularAposentadoriaHomem()">Aposentadoria Homem</button> <button onclick="calcularAposentadoriaMulher()">Aposentadoria Mulher</button></p>
+    <div id="resultado"></div>
+</body>
+<script>
+    let divResultado = document.getElementById("resultado");
+
+     function calcularAposentadoriaHomem(){
+        let idade = Number(document.getElementById("id_idade").value);
+        let resultado = 70 - idade;
+        divResultado.innerHTML = "<p>Faltam " + resultado + " anos para você se aposentar</p>"
+    }
+
+    function calcularAposentadoriaMulher(){
+        let idade = Number(document.getElementById("id_idade").value);
+        let resultado = 60 - idade;
+        divResultado.innerHTML = "<p>Faltam " + resultado + " anos para você se aposentar</p>"
+    }
+        
+    
+</script>
+</html>

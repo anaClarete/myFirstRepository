@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Ki dos Sayajins!</title>
+</head>
+<body>
+    <h1>O Ki dos Sayajins!</h1>
+    <p><input type="text" id="nome_guerreiro" placeholder="Digite o nome do guerreiro"></p>
+    <p><input type="text" id="ki_guerreiro" placeholder="Digite o ki do guerreiro"></p>
+    <p><button onclick="calcular()">Ver ki em cada forma</button></p>
+    
+</body>
+<script>
+    function calcular(){
+        let nome = document.getElementById("nome_guerreiro").value;
+        let ki = Number(document.getElementById("ki_guerreiro").value);
+        alert(`O ki de ${nome} na forma Super Sayajin é ${ki * 50}`);
+        alert(`O ki de ${nome} ma forma Super Sayajin 2 é  ${ki * 100}`);
+    }
+</script>
+</html>
